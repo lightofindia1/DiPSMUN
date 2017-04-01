@@ -37,6 +37,10 @@
 	<link href='wp-content/plugins/bbpress/templates/default/css/bbpress237e.css?ver=2.5.9-6017' id='bbp-default-css' media='screen' rel='stylesheet' type='text/css'>
 	<link href='wp-content/plugins/revslider/rs-plugin/css/settings1dc6.css?ver=4.6.5' id='rs-plugin-settings-css' media='all' rel='stylesheet' type='text/css'>
 	<style id='rs-plugin-settings-inline-css' type='text/css'>
+	   .mobile_logo_set{
+			width:40px !important;
+			height:40px !important;
+		}
 	   .tp-caption a{color:#ff7302;text-shadow:none;-webkit-transition:all 0.2s ease-out;-moz-transition:all 0.2s ease-out;-o-transition:all 0.2s ease-out;-ms-transition:all 0.2s ease-out}.tp-caption a:hover{color:#ffa902}.largeredbtn{font-family:"Raleway",sans-serif;font-weight:900;font-size:16px;line-height:60px;color:#fff !important;text-decoration:none;padding-left:40px;padding-right:80px;padding-top:22px;padding-bottom:22px;background:rgb(234,91,31); background:-moz-linear-gradient(top,rgba(234,91,31,1) 0%,rgba(227,58,12,1) 100%); background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,rgba(234,91,31,1)),color-stop(100%,rgba(227,58,12,1))); background:-webkit-linear-gradient(top,rgba(234,91,31,1) 0%,rgba(227,58,12,1) 100%); background:-o-linear-gradient(top,rgba(234,91,31,1) 0%,rgba(227,58,12,1) 100%); background:-ms-linear-gradient(top,rgba(234,91,31,1) 0%,rgba(227,58,12,1) 100%); background:linear-gradient(to bottom,rgba(234,91,31,1) 0%,rgba(227,58,12,1) 100%); filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#ea5b1f',endColorstr='#e33a0c',GradientType=0 )}.largeredbtn:hover{background:rgb(227,58,12); background:-moz-linear-gradient(top,rgba(227,58,12,1) 0%,rgba(234,91,31,1) 100%); background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,rgba(227,58,12,1)),color-stop(100%,rgba(234,91,31,1))); background:-webkit-linear-gradient(top,rgba(227,58,12,1) 0%,rgba(234,91,31,1) 100%); background:-o-linear-gradient(top,rgba(227,58,12,1) 0%,rgba(234,91,31,1) 100%); background:-ms-linear-gradient(top,rgba(227,58,12,1) 0%,rgba(234,91,31,1) 100%); background:linear-gradient(to bottom,rgba(227,58,12,1) 0%,rgba(234,91,31,1) 100%); filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#e33a0c',endColorstr='#ea5b1f',GradientType=0 )}.fullrounded img{-webkit-border-radius:400px;-moz-border-radius:400px;border-radius:400px}
 	</style>
 	<link href='wp-content/themes/gnar-demo/assets/colorpicker/css/colorpicker801b.css?ver=4.5.7' id='color-picker-css' media='all' rel='stylesheet' type='text/css'>
@@ -811,623 +815,32 @@ WordPress: 4.5.7
 -->
 </head>
 <body class="page page-id-5863 page-child parent-pageid-5817 page-template page-template-template_builder page-template-template_builder-php windows unknown-browser desktop tb-scroll-effects tb-suck-up content_light tb-tag-cloud tb-print-styles tb-img-popout logo-right tb-gforms-compat hide-featured-area hide-featured-area-above custom-layout-home-portland has_custom_layout sidebar-layout-full_width">
-	<div class="tb-demo-panel">
-		<a class="demo-panel-toggle" href="#" title="Demo Options">Demo Options</a>
-		<ul class="list-unstyled">
-			<li class="section-preset">
-				<h5>Presets</h5><select id="preset">
-					<option value="default">
-						Default
-					</option>
-					<option value="maui">
-						Maui
-					</option>
-					<option value="new-york">
-						New York
-					</option>
-					<option selected='selected' value="portland">
-						Portland
-					</option>
-					<option value="santa-monica">
-						Santa Monica
-					</option>
-					<option value="vail">
-						Vail
-					</option>
-				</select>
-			</li>
-			<li class="section-layout-style">
-				<h5>Site Style</h5><select id="layout-style">
-					<option selected='selected' value="stretch">
-						Stretched
-					</option>
-					<option value="boxed">
-						Boxed
-					</option>
-				</select>
-			</li>
-			<li class="section-logo-placement">
-				<h5>Header</h5><select id="logo-placement">
-					<option selected='selected' value="right">
-						Logo Right
-					</option>
-					<option value="left">
-						Logo Left
-					</option>
-				</select>
-			</li>
-			<li class="section-header-style no-title"><select id="header-style">
-				<option value="edgy">
-					Edgy
-				</option>
-				<option value="bold">
-					Bold
-				</option>
-				<option value="modern">
-					Modern
-				</option>
-			</select></li>
-			<li class="section-menu no-title"><select id="menu">
-				<option selected='selected' value="hidden">
-					Hidden Menu
-				</option>
-				<option value="visible">
-					Visible Menu
-				</option>
-			</select></li>
-			<li class="section-header-trans no-title"><select id="header-trans">
-				<option selected='selected' value="trans">
-					Transparent
-				</option>
-				<option value="standard">
-					Standard
-				</option>
-			</select></li>
-			<li class="section-header-highlight no-title"><input data-default="#36b3a8" id="header-highlight" value="#36b3a8"></li>
-			<li class="section-header-bg-color no-title"><input data-default="#1b1b1b" id="header-bg-color" value="#1b1b1b"></li>
-			<li class="section-header-text no-title"><select id="header-text">
-				<option selected='selected' value="dark">
-					Light Text
-				</option>
-				<option value="light">
-					Dark Text
-				</option>
-			</select></li>
-			<li class="section-highlight">
-				<h5>Highlight</h5><input data-default="#36b3a8" id="highlight" value="#36b3a8">
-			</li>
-			<li class="section-search-bg-color">
-				<h5>Search Panel</h5><input data-default="#ffffff" id="search-bg-color" value="#ffffff">
-			</li>
-			<li class="section-search-text no-title"><select id="search-text">
-				<option value="dark">
-					Light Text
-				</option>
-				<option selected='selected' value="light">
-					Dark Text
-				</option>
-			</select></li>
-			<li class="section-footer-bg-color">
-				<h5>Footer</h5><input data-default="#1b1b1b" id="footer-bg-color" value="#1b1b1b">
-			</li>
-			<li class="section-footer-text no-title"><select id="footer-text">
-				<option selected='selected' value="dark">
-					Light Text
-				</option>
-				<option value="light">
-					Dark Text
-				</option>
-			</select></li>
-			<li class="section-copyright-bg-color">
-				<h5>Copyright</h5><input data-default="#222222" id="copyright-bg-color" value="#222222">
-			</li>
-			<li class="section-copyright-text no-title"><select id="copyright-text">
-				<option selected='selected' value="dark">
-					Light Text
-				</option>
-				<option value="light">
-					Dark Text
-				</option>
-			</select></li>
-		</ul>
-	</div><!-- .tb-demo-panel (end) -->
+	
 	<a class="site-menu-toggle edgy transparent" href="#"><span class="hamburger"><span class="top"></span> <span class="middle"></span> <span class="bottom"></span></span></a>
 	<div class="site-menu-panel edgy dark">
 		<div class="wrap">
 			<nav class="header-nav dark" id="access" role="navigation">
 				<div class="wrap clearfix">
 					<ul class="header-top-nav list-unstyled">
-						<li class="top-cart">
-							<a class="tb-cart-trigger menu-btn" data-target="#floating-shopping-cart" data-toggle="modal" href="#"><i class="fa fa-shopping-basket"></i></a>
-						</li>
-						<li class="top-lang">
-							<a class="gnar-lang-trigger" data-target="#floating-lang-switcher" data-toggle="modal" href="#" title="Set Language"><i class="fa fa-globe"></i></a>
-						</li>
 						<li class="top-search">
 							<a class="tb-search-trigger gnar-search-trigger" href="#" title="Search the site..."><i class="fa fa-search"></i></a>
 						</li>
 					</ul>
 					<ul class="tb-primary-menu tb-to-mobile-menu sf-menu sf-menu-with-fontawesome clearfix" id="menu-main-menu">
 						<li class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-page-parent menu-item-5890 level-1" id="menu-item-5890">
-							<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/">Home</a>
+							<a class="menu-btn" href="#home">Home</a>
 						</li>
-						<li class="no-click menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-5875 level-1" id="menu-item-5875">
-							<a class="menu-btn" href="#">Styles<i class="sf-sub-indicator fa fa-caret-down"></i></a>
-							<ul class="sub-menu non-mega-sub-menu">
-								<li class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-page-parent menu-item-5877 level-2" id="menu-item-5877">
-									<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/">Default</a>
-								</li>
-								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5878 level-2" id="menu-item-5878">
-									<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/home/home-basic/">Default Basic</a>
-								</li>
-								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5879 level-2" id="menu-item-5879">
-									<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/home/home-maui/">Maui</a>
-								</li>
-								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5880 level-2" id="menu-item-5880">
-									<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/home/home-maui-basic/">Maui Basic</a>
-								</li>
-								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5881 level-2" id="menu-item-5881">
-									<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/home/home-new-york/">New York</a>
-								</li>
-								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5882 level-2" id="menu-item-5882">
-									<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/home/home-new-york-basic/">New York Basic</a>
-								</li>
-								<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-5863 current_page_item menu-item-5883 level-2" id="menu-item-5883">
-									<a class="menu-btn" href="index.html">Portland</a>
-								</li>
-								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5884 level-2" id="menu-item-5884">
-									<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/home/home-portland-basic/">Portland Basic</a>
-								</li>
-								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5885 level-2" id="menu-item-5885">
-									<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/home/home-santa-monica/">Santa Monica</a>
-								</li>
-								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5886 level-2" id="menu-item-5886">
-									<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/home/home-santa-monica-basic/">Santa Monica Basic</a>
-								</li>
-								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5888 level-2" id="menu-item-5888">
-									<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/home/home-vail/">Vail</a>
-								</li>
-								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5887 level-2" id="menu-item-5887">
-									<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/home/home-vail-basic/">Vail Basic</a>
-								</li>
-							</ul>
+						<li class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-page-parent menu-item-5890 level-1" id="menu-item-5890">
+							<a class="menu-btn" href="#committees">Committees</a>
 						</li>
-						<li class="no-click menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-5658 level-1" id="menu-item-5658">
-							<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/pages/">Pages<i class="sf-sub-indicator fa fa-caret-down"></i></a>
-							<ul class="sub-menu non-mega-sub-menu">
-								<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-has-children menu-item-5826 level-2" id="menu-item-5826">
-									<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1">Home<i class="sf-sub-indicator fa fa-caret-right"></i></a>
-									<ul class="sub-menu non-mega-sub-menu">
-										<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5753 level-3" id="menu-item-5753">
-											<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/home/home-default/">Home Default</a>
-										</li>
-										<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5889 level-3" id="menu-item-5889">
-											<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/home/home-basic/">Home Basic</a>
-										</li>
-										<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5757 level-3" id="menu-item-5757">
-											<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/home/home-agency/">Home Agency</a>
-										</li>
-										<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5662 level-3" id="menu-item-5662">
-											<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/home/home-agency-basic/">Home Agency Basic</a>
-										</li>
-										<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5784 level-3" id="menu-item-5784">
-											<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/home/home-blog/">Home Blog</a>
-										</li>
-										<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5775 level-3" id="menu-item-5775">
-											<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/home/home-corporate/">Home Corporate</a>
-										</li>
-										<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5783 level-3" id="menu-item-5783">
-											<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/home/home-parallax/">Home Parallax</a>
-										</li>
-										<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5766 level-3" id="menu-item-5766">
-											<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/home/home-portfolio/">Home Portfolio</a>
-										</li>
-										<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5831 level-3" id="menu-item-5831">
-											<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/home/home-shop/">Home Shop</a>
-										</li>
-									</ul>
-								</li>
-								<li class="no-click menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5677 level-2" id="menu-item-5677">
-									<a class="menu-btn" href="#">About<i class="sf-sub-indicator fa fa-caret-right"></i></a>
-									<ul class="sub-menu non-mega-sub-menu">
-										<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5684 level-3" id="menu-item-5684">
-											<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/pages/about-agency/">About Agency</a>
-										</li>
-										<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5665 level-3" id="menu-item-5665">
-											<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/pages/about-basic/">About Basic</a>
-										</li>
-										<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5706 level-3" id="menu-item-5706">
-											<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/pages/about-me/">About Me</a>
-										</li>
-										<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5681 level-3" id="menu-item-5681">
-											<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/pages/about-minimal/">About Minimal</a>
-										</li>
-										<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5703 level-3" id="menu-item-5703">
-											<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/pages/about-stretch/">About Stretch</a>
-										</li>
-									</ul>
-								</li>
-								<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5733 level-2" id="menu-item-5733">
-									<a class="menu-btn" href="#">Contact<i class="sf-sub-indicator fa fa-caret-right"></i></a>
-									<ul class="sub-menu non-mega-sub-menu">
-										<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5732 level-3" id="menu-item-5732">
-											<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/pages/contact-fancy/">Contact Fancy</a>
-										</li>
-										<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5728 level-3" id="menu-item-5728">
-											<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/pages/contact-minimal/">Contact Minimal</a>
-										</li>
-										<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5652 level-3" id="menu-item-5652">
-											<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/pages/contact/">Contact Simple</a>
-										</li>
-										<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5730 level-3" id="menu-item-5730">
-											<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/pages/contact-standard/">Contact Standard</a>
-										</li>
-										<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5729 level-3" id="menu-item-5729">
-											<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/pages/contact-stretch/">Contact Stretch</a>
-										</li>
-									</ul>
-								</li>
-								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5731 level-2" id="menu-item-5731">
-									<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/pages/help/">Help / FAQ</a>
-								</li>
-								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5653 level-2" id="menu-item-5653">
-									<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/pages/pricing/">Pricing</a>
-								</li>
-								<li class="no-click menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5694 level-2" id="menu-item-5694">
-									<a class="menu-btn" href="#">Services<i class="sf-sub-indicator fa fa-caret-right"></i></a>
-									<ul class="sub-menu non-mega-sub-menu">
-										<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5696 level-3" id="menu-item-5696">
-											<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/pages/services-agency/">Services Agency</a>
-										</li>
-										<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5698 level-3" id="menu-item-5698">
-											<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/pages/services-basic/">Services Basic</a>
-										</li>
-										<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5897 level-3" id="menu-item-5897">
-											<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/pages/services-images/">Services Images</a>
-										</li>
-										<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5695 level-3" id="menu-item-5695">
-											<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/pages/services-minimal/">Services Minimal</a>
-										</li>
-										<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5697 level-3" id="menu-item-5697">
-											<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/pages/services-stretch/">Services Stretch</a>
-										</li>
-									</ul>
-								</li>
-							</ul>
+						<li class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-page-parent menu-item-5890 level-1" id="menu-item-5890">
+							<a class="menu-btn" href="#resources">Resources</a>
 						</li>
-						<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-5200 level-1" id="menu-item-5200">
-							<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/blog/">Blog<i class="sf-sub-indicator fa fa-caret-down"></i></a>
-							<ul class="sub-menu non-mega-sub-menu">
-								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5351 level-2" id="menu-item-5351">
-									<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/blog/">Blog with Sidebar</a>
-								</li>
-								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5393 level-2" id="menu-item-5393">
-									<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/blog/blog-full-width/">Blog Full-Width</a>
-								</li>
-								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5345 level-2" id="menu-item-5345">
-									<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/blog/grid-blog-2-columns/">Grid Blog &#8211; 2 Columns</a>
-								</li>
-								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5344 level-2" id="menu-item-5344">
-									<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/blog/grid-blog-3-columns/">Grid Blog &#8211; 3 Columns</a>
-								</li>
-								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5343 level-2" id="menu-item-5343">
-									<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/blog/grid-blog-4-columns/">Grid Blog &#8211; 4 Columns</a>
-								</li>
-								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5342 level-2" id="menu-item-5342">
-									<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/blog/grid-blog-masonry/">Grid Blog &#8211; Masonry</a>
-								</li>
-								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5346 level-2" id="menu-item-5346">
-									<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/blog/list-blog/">List Blog</a>
-								</li>
-							</ul>
-						</li>
-						<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-5201 level-1" id="menu-item-5201">
-							<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/portfolio/">Portfolio<i class="sf-sub-indicator fa fa-caret-down"></i></a>
-							<ul class="sub-menu non-mega-sub-menu">
-								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5404 level-2" id="menu-item-5404">
-									<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/portfolio/">Post Showcase</a>
-								</li>
-								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5520 level-2" id="menu-item-5520">
-									<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/portfolio/showcase-without-titles/">Showcase Without Titles</a>
-								</li>
-								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5330 level-2" id="menu-item-5330">
-									<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/portfolio/showcase-with-excerpts/">Showcase with Excerpts</a>
-								</li>
-								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5329 level-2" id="menu-item-5329">
-									<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/portfolio/showcase-stretch/">Showcase Stretch</a>
-								</li>
-								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5332 level-2" id="menu-item-5332">
-									<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/portfolio/showcase-masonry/">Showcase Masonry</a>
-								</li>
-								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5340 level-2" id="menu-item-5340">
-									<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/portfolio/showcase-stretch-masonry/">Showcase Stretch Masonry</a>
-								</li>
-								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5335 level-2" id="menu-item-5335">
-									<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/portfolio/grid-2-columns/">Classic Grid &#8211; 2 Columns</a>
-								</li>
-								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5334 level-2" id="menu-item-5334">
-									<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/portfolio/grid-3-columns/">Classic Grid &#8211; 3 Columns</a>
-								</li>
-								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5333 level-2" id="menu-item-5333">
-									<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/portfolio/grid-4-columns/">Classic Grid &#8211; 4 Columns</a>
-								</li>
-							</ul>
-						</li>
-						<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-5202 level-1" id="menu-item-5202">
-							<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/shop/">Shop<i class="sf-sub-indicator fa fa-caret-down"></i></a>
-							<ul class="sub-menu non-mega-sub-menu">
-								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5394 level-2" id="menu-item-5394">
-									<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/shop/">Shop Full Width</a>
-								</li>
-								<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5504 level-2" id="menu-item-5504">
-									<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/product-category/swag/">Shop – Standard Grid</a>
-								</li>
-								<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5505 level-2" id="menu-item-5505">
-									<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/product-category/swag/?view=list">Shop – List View</a>
-								</li>
-								<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5506 level-2" id="menu-item-5506">
-									<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/product-category/swag/?view=catalog">Shop – Catalog View</a>
-								</li>
-								<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5507 level-2" id="menu-item-5507">
-									<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/shop/jumpstart-logo-zip-hoodie/">Single Product</a>
-								</li>
-								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5508 level-2" id="menu-item-5508">
-									<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/shop/cart/">Cart</a>
-								</li>
-								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5509 level-2" id="menu-item-5509">
-									<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/shop/checkout/">Checkout</a>
-								</li>
-							</ul>
-						</li>
-						<li class="has-mega-menu mega-col-4 no-click menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5206 level-1" id="menu-item-5206">
-							<a class="menu-btn" href="#">Examples<i class="sf-sub-indicator fa fa-caret-down"></i></a>
-							<div class="sf-mega">
-								<div class="sf-mega-section">
-									<ul class="sub-menu mega-sub-menu level-1">
-										<li class="menu-item-has-children">
-											<span class="mega-section-header">Posts</span>
-											<ul class="sub-menu mega-sub-menu level-2">
-												<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-5431 level-3" id="menu-item-5431">
-													<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/2015/08/02/an-amazing-journey-through-the-mountains/">A Beautiful Image-Heavy Post</a>
-												</li>
-												<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-5432 level-3" id="menu-item-5432">
-													<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/2015/08/03/a-post-with-everything-in-it/">A Post with Everything in It</a>
-												</li>
-												<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-5498 level-3" id="menu-item-5498">
-													<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/2014/11/09/the-top-of-the-mountains/">Full-Screen Parallax Featured Image</a>
-												</li>
-												<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-5433 level-3" id="menu-item-5433">
-													<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/2015/08/02/full-screen-gallery-post/">Full-Screen Gallery Post</a>
-												</li>
-												<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-5440 level-3" id="menu-item-5440">
-													<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/2014/12/09/a-quote-post/">Full-Screen Parallax Quote</a>
-												</li>
-												<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-5462 level-3" id="menu-item-5462">
-													<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/2014/11/20/a-post-with-a-banner/">Full-Width Featured Image</a>
-												</li>
-												<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-5434 level-3" id="menu-item-5434">
-													<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/2014/12/12/full-width-gallery-post/">Full-Width Gallery Post</a>
-												</li>
-											</ul><!-- .mega-sub-menu.level-2 (end) -->
-										</li><!-- .menu-item-has-children (end) -->
-									</ul><!-- .mega-sub-menu.level-1 (end) -->
-								</div><!-- .sf-mega-section (end) -->
-								<div class="sf-mega-section">
-									<ul class="sub-menu mega-sub-menu level-1">
-										<li class="menu-item-has-children placeholder">
-											<span class="mega-section-header">PLACEHOLDER</span>
-											<ul class="sub-menu mega-sub-menu level-2">
-												<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-5452 level-3" id="menu-item-5452">
-													<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/2015/08/01/an-image-post/">Standard Featured Image</a>
-												</li>
-												<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-5435 level-3" id="menu-item-5435">
-													<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/2014/12/11/a-video-post/">A Video Post</a>
-												</li>
-												<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-5457 level-3" id="menu-item-5457">
-													<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/2014/11/14/post-with-a-sidebar/">Post with a Sidebar</a>
-												</li>
-												<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-5443 level-3" id="menu-item-5443">
-													<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/2014/11/25/post-with-a-lot-of-comments/">Post with a Lot of Comments</a>
-												</li>
-												<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-5447 level-3" id="menu-item-5447">
-													<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/2014/11/22/post-with-pagination/">Post with Pagination</a>
-												</li>
-												<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-5449 level-3" id="menu-item-5449">
-													<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/2014/11/07/post-with-a-dropcap/">Post with a Dropcap</a>
-												</li>
-											</ul><!-- .mega-sub-menu.level-2 (end) -->
-										</li><!-- .menu-item-has-children (end) -->
-									</ul><!-- .mega-sub-menu.level-1 (end) -->
-								</div><!-- .sf-mega-section (end) -->
-								<div class="sf-mega-section">
-									<ul class="sub-menu mega-sub-menu level-1">
-										<li class="menu-item-has-children">
-											<span class="mega-section-header">Pages</span>
-											<ul class="sub-menu mega-sub-menu level-2">
-												<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5465 level-3" id="menu-item-5465">
-													<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/practical-examples/transparent-header-full-screen-parallax-featured/">Trans Header + Full-Screen Parallax Featured</a>
-												</li>
-												<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5466 level-3" id="menu-item-5466">
-													<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/practical-examples/transparent-header-full-width-featured/">Trans Header + Full-Width Featured</a>
-												</li>
-												<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5386 level-3" id="menu-item-5386">
-													<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/practical-examples/transparent-header-video-hero/">Trans Header + Video BG Hero</a>
-												</li>
-												<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5475 level-3" id="menu-item-5475">
-													<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/practical-examples/full-screen-parallax-featured/">Full-Screen Parallax Featured</a>
-												</li>
-												<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5474 level-3" id="menu-item-5474">
-													<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/practical-examples/full-width-featured/">Full-Width Featured</a>
-												</li>
-												<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5484 level-3" id="menu-item-5484">
-													<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/practical-examples/page-with-left-sidebar/">Page with Left Sidebar</a>
-												</li>
-												<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5483 level-3" id="menu-item-5483">
-													<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/practical-examples/page-with-right-sidebar/">Page with Right Sidebar</a>
-												</li>
-											</ul><!-- .mega-sub-menu.level-2 (end) -->
-										</li><!-- .menu-item-has-children (end) -->
-									</ul><!-- .mega-sub-menu.level-1 (end) -->
-								</div><!-- .sf-mega-section (end) -->
-								<div class="sf-mega-section">
-									<ul class="sub-menu mega-sub-menu level-1">
-										<li class="menu-item-has-children placeholder">
-											<span class="mega-section-header">PLACEHOLDER</span>
-											<ul class="sub-menu mega-sub-menu level-2">
-												<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5494 level-3" id="menu-item-5494">
-													<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/author/jason/">Author Archives</a>
-												</li>
-												<li class="menu-item menu-item-type-post_type_archive menu-item-object-forum menu-item-5660 level-3" id="menu-item-5660">
-													<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/forums/">bbPress Forums</a>
-												</li>
-												<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5495 level-3" id="menu-item-5495">
-													<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/category/photos/">Category Archive</a>
-												</li>
-												<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5388 level-3" id="menu-item-5388">
-													<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/practical-examples/revolution-slider/">Revolution Slider</a>
-												</li>
-												<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5496 level-3" id="menu-item-5496">
-													<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/?s=mountain">Search Results</a>
-												</li>
-												<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5497 level-3" id="menu-item-5497">
-													<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/practical-examples/gravity-forms-examples/">Gravity Forms Examples</a>
-												</li>
-											</ul><!-- .mega-sub-menu.level-2 (end) -->
-										</li><!-- .menu-item-has-children (end) -->
-									</ul><!-- .mega-sub-menu.level-1 (end) -->
-								</div><!-- .sf-mega-section (end) -->
-							</div><!-- .sf-mega (end) -->
-						</li>
-						<li class="has-mega-menu mega-col-4 no-click menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5582 level-1" id="menu-item-5582">
-							<a class="menu-btn" href="#">Features<i class="sf-sub-indicator fa fa-caret-down"></i></a>
-							<div class="sf-mega">
-								<div class="sf-mega-section">
-									<ul class="sub-menu mega-sub-menu level-1">
-										<li class="menu-item-has-children">
-											<span class="mega-section-header">Layout Builder</span>
-											<ul class="sub-menu mega-sub-menu level-2">
-												<li class="menu-icon-play-circle video menu-item menu-item-type-custom menu-item-object-custom menu-item-5621 level-3" id="menu-item-5621">
-													<a class="menu-btn" href="https://vimeo.com/70256816"><i class="fa fa-play-circle fa-fw"></i>Builder Overview</a>
-												</li>
-												<li class="menu-icon-play-circle video menu-item menu-item-type-custom menu-item-object-custom menu-item-5622 level-3" id="menu-item-5622">
-													<a class="menu-btn" href="https://vimeo.com/70256799"><i class="fa fa-play-circle fa-fw"></i>Setting Up a Homepage</a>
-												</li>
-												<li class="menu-icon-play-circle video menu-item menu-item-type-custom menu-item-object-custom menu-item-5623 level-3" id="menu-item-5623">
-													<a class="menu-btn" href="https://vimeo.com/112117384"><i class="fa fa-play-circle fa-fw"></i>Creating Re-usable Templates</a>
-												</li>
-												<li class="menu-icon-play-circle video menu-item menu-item-type-custom menu-item-object-custom menu-item-5624 level-3" id="menu-item-5624">
-													<a class="menu-btn" href="https://vimeo.com/112117385"><i class="fa fa-play-circle fa-fw"></i>Using Sample Layouts</a>
-												</li>
-											</ul><!-- .mega-sub-menu.level-2 (end) -->
-										</li><!-- .menu-item-has-children (end) -->
-									</ul><!-- .mega-sub-menu.level-1 (end) -->
-								</div><!-- .sf-mega-section (end) -->
-								<div class="sf-mega-section">
-									<ul class="sub-menu mega-sub-menu level-1">
-										<li class="menu-item-has-children">
-											<span class="mega-section-header">Shortcodes</span>
-											<ul class="sub-menu mega-sub-menu level-2">
-												<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5593 level-3" id="menu-item-5593">
-													<a class="menu-btn" href="http://demoblvd.com/plugins/shortcodes/generator/" target="_blank">Shortcode Generator</a>
-												</li>
-												<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5594 level-3" id="menu-item-5594">
-													<a class="menu-btn" href="http://demoblvd.com/plugins/shortcodes/generator/buttons/" target="_blank">Buttons</a>
-												</li>
-												<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5595 level-3" id="menu-item-5595">
-													<a class="menu-btn" href="http://demoblvd.com/plugins/shortcodes/generator/columns/" target="_blank">Columns</a>
-												</li>
-												<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5596 level-3" id="menu-item-5596">
-													<a class="menu-btn" href="http://demoblvd.com/plugins/shortcodes/generator/small-components/" target="_blank">Components</a>
-												</li>
-												<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5597 level-3" id="menu-item-5597">
-													<a class="menu-btn" href="http://demoblvd.com/plugins/shortcodes/generator/shortcodes-display-posts/" target="_blank">Display Posts</a>
-												</li>
-												<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5599 level-3" id="menu-item-5599">
-													<a class="menu-btn" href="http://demoblvd.com/plugins/shortcodes/generator/inline-element/" target="_blank">Inline Elements</a>
-												</li>
-												<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5600 level-3" id="menu-item-5600">
-													<a class="menu-btn" href="http://demoblvd.com/plugins/shortcodes/generator/lightbox/" target="_blank">Lightbox</a>
-												</li>
-												<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5601 level-3" id="menu-item-5601">
-													<a class="menu-btn" href="http://demoblvd.com/plugins/shortcodes/pricing-tables/" target="_blank">Pricing Tables</a>
-												</li>
-												<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5602 level-3" id="menu-item-5602">
-													<a class="menu-btn" href="http://demoblvd.com/plugins/shortcodes/generator/shortcodes-sliders/" target="_blank">Sliders</a>
-												</li>
-												<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5603 level-3" id="menu-item-5603">
-													<a class="menu-btn" href="http://demoblvd.com/plugins/shortcodes/generator/statistics/" target="_blank">Statistics</a>
-												</li>
-												<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5604 level-3" id="menu-item-5604">
-													<a class="menu-btn" href="http://demoblvd.com/plugins/shortcodes/generator/tabs/" target="_blank">Tabs &#038; Toggles</a>
-												</li>
-											</ul><!-- .mega-sub-menu.level-2 (end) -->
-										</li><!-- .menu-item-has-children (end) -->
-									</ul><!-- .mega-sub-menu.level-1 (end) -->
-								</div><!-- .sf-mega-section (end) -->
-								<div class="sf-mega-section">
-									<ul class="sub-menu mega-sub-menu level-1">
-										<li class="menu-item-has-children">
-											<span class="mega-section-header">Sidebar Layouts</span>
-											<ul class="sub-menu mega-sub-menu level-2">
-												<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5607 level-3" id="menu-item-5607">
-													<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/sidebar-layouts/full-width/">Full Width</a>
-												</li>
-												<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5608 level-3" id="menu-item-5608">
-													<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/sidebar-layouts/sidebar-left/">Sidebar Left</a>
-												</li>
-												<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5609 level-3" id="menu-item-5609">
-													<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/sidebar-layouts/sidebar-right/">Sidebar Right</a>
-												</li>
-												<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5620 level-3" id="menu-item-5620">
-													<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/sidebar-layouts/double-sidebar/">Double Sidebar</a>
-												</li>
-												<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5618 level-3" id="menu-item-5618">
-													<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/sidebar-layouts/double-right-sidebars/">Double Right Sidebars</a>
-												</li>
-												<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5619 level-3" id="menu-item-5619">
-													<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/sidebar-layouts/double-left-sidebars/">Double Left Sidebars</a>
-												</li>
-											</ul><!-- .mega-sub-menu.level-2 (end) -->
-										</li><!-- .menu-item-has-children (end) -->
-									</ul><!-- .mega-sub-menu.level-1 (end) -->
-								</div><!-- .sf-mega-section (end) -->
-								<div class="sf-mega-section">
-									<ul class="sub-menu mega-sub-menu level-1">
-										<li class="menu-item-has-children">
-											<span class="mega-section-header">Page Templates</span>
-											<ul class="sub-menu mega-sub-menu level-2">
-												<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5584 level-3" id="menu-item-5584">
-													<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/page-templates/archives/">Archives</a>
-												</li>
-												<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5585 level-3" id="menu-item-5585">
-													<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/page-templates/blank-page/">Blank Page</a>
-												</li>
-												<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5586 level-3" id="menu-item-5586">
-													<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/page-templates/template-blog/">Blog</a>
-												</li>
-												<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5587 level-3" id="menu-item-5587">
-													<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/page-templates/post-grid/">Post Grid</a>
-												</li>
-												<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5588 level-3" id="menu-item-5588">
-													<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/page-templates/post-list/">Post List</a>
-												</li>
-												<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5589 level-3" id="menu-item-5589">
-													<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/page-templates/post-showcase/">Post Showcase</a>
-												</li>
-												<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5590 level-3" id="menu-item-5590">
-													<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/page-templates/redirect/">Redirect</a>
-												</li>
-												<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5591 level-3" id="menu-item-5591">
-													<a class="menu-btn" href="http://demoblvd.com/themes/gnar/demo-1/page-templates/sitemap/">Sitemap</a>
-												</li>
-											</ul><!-- .mega-sub-menu.level-2 (end) -->
-										</li><!-- .menu-item-has-children (end) -->
-									</ul><!-- .mega-sub-menu.level-1 (end) -->
-								</div><!-- .sf-mega-section (end) -->
-							</div><!-- .sf-mega (end) -->
+						<li class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-page-parent menu-item-5890 level-1" id="menu-item-5890">
+							<a class="menu-btn" href="#contact">Contact Us</a>
 						</li>
 						<li class="highlight menu-item menu-item-type-custom menu-item-object-custom menu-item-5258 level-1" id="menu-item-5258">
-							<a class="menu-btn" href="http://themeblvd.com/links/buy-dinali">Get Started</a>
+							<a class="menu-btn" href="#register">Register Now</a>
 						</li>
 					</ul>
 					<ul class="themeblvd-contact-bar tb-social-icons custom clearfix">
@@ -1459,15 +872,9 @@ WordPress: 4.5.7
 							<a class="tb-image-logo" href="#" title="DiPSMUN"><img alt="DiPSMUN" height="80" src="assets/img/logo.png" srcset="assets/img/logo.png 1x, assets/img/logo.png 2x" width="70"></a>
 						</div><!-- .header-logo (end) -->
 						<div class="header-logo header_logo header_logo_image logo-mobile">
-							<a class="tb-image-logo" href="#" title="DiPSMUN"><img alt="DiPSMUN" height="40" src="assets/img/logo.png" srcset="assets/img/logo.png 1x, assets/img/logo-mobile_2x.png 2x" width="100"></a>
+							<a class="tb-image-logo" href="#" title="DiPSMUN"><img alt="DiPSMUN" height="40" src="assets/img/logo.png" srcset="assets/img/logo.png 1x, assets/img/logo-mobile_2x.png 2x" width="40" class="mobile_logo_set"></a>
 						</div><!-- .header-logo (end) -->
 						<ul class="header-top-nav list-unstyled">
-							<li class="top-cart">
-								<a class="tb-cart-trigger menu-btn" data-target="#floating-shopping-cart" data-toggle="modal" href="#"><i class="fa fa-shopping-basket"></i></a>
-							</li>
-							<li class="top-lang">
-								<a class="gnar-lang-trigger" data-target="#floating-lang-switcher" data-toggle="modal" href="#" title="Set Language"><i class="fa fa-globe"></i></a>
-							</li>
 							<li class="top-search">
 								<a class="tb-search-trigger gnar-search-trigger" href="#" title="Search the site..."><i class="fa fa-search"></i></a>
 							</li>
@@ -1581,10 +988,10 @@ WordPress: 4.5.7
 									<figure class="tb-image-box has-title has-info has-button">
 										<img src="assets/img/info-1.jpg">
 										<figcaption>
-											<h5>Bold Adventures</h5>
+											<h5>About DiPSMUN</h5>
 											<div class="info">
-												<h5>Bold Adventures</h5>
-												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p><a class="btn tb-custom-button btn-sm" data-bg="transparent" data-bg-hover="#ffffff" data-text="#ffffff" data-text-hover="#161616" href="#" style="background-color: transparent; border-color: #ffffff; color: #ffffff;" target="_self" title="Learn More">Learn More</a>
+												<h5>About DiPSMUN</h5>
+												<p>A Model United Nations (MUN) is an educational stimulation of the United Nations Organization. Every participant is appointed ...</p><a class="btn tb-custom-button btn-sm" data-bg="transparent" data-bg-hover="#ffffff" data-text="#ffffff" data-text-hover="#161616" href="#." style="background-color: transparent; border-color: #ffffff; color: #ffffff;" title="Read More">Read More</a>
 											</div><!-- .info (end) -->
 										</figcaption>
 									</figure>
@@ -1595,10 +1002,10 @@ WordPress: 4.5.7
 									<figure class="tb-image-box has-title has-info has-button">
 										<img src="assets/img/info-2.jpg">
 										<figcaption>
-											<h5>Awesome Stories</h5>
+											<h5>About DPS Bangalore South</h5>
 											<div class="info">
-												<h5>Awesome Stories</h5>
-												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p><a class="btn tb-custom-button btn-sm" data-bg="transparent" data-bg-hover="#ffffff" data-text="#ffffff" data-text-hover="#161616" href="#" style="background-color: transparent; border-color: #ffffff; color: #ffffff;" target="_self" title="Learn More">Learn More</a>
+												<h5>About DPS Bangalore South</h5>
+												<p>Delhi Public School, Bangalore South is an eminent member of the prestigious DPS family that comprises of over a hundred schools not just in India...</p><a class="btn tb-custom-button btn-sm" data-bg="transparent" data-bg-hover="#ffffff" data-text="#ffffff" data-text-hover="#161616" href="#." style="background-color: transparent; border-color: #ffffff; color: #ffffff;" title="Read More">Read More</a>
 											</div><!-- .info (end) -->
 										</figcaption>
 									</figure>
@@ -1616,7 +1023,7 @@ WordPress: 4.5.7
 					</div><!-- #element_21869225756cb6ddeaba75 (end) -->
 					<div class="element element-2 element-quote last quote no-popout clearfix" id="element_164146649256cb6d97e3026" style="background-color: transparent;">
 						<blockquote class="tb-blockquote" style="max-width: 1200px;">
-							<p>“I went to the woods because I wished to live deliberately, to front only the essential facts of life, and see if I could not learn what it had to teach, and not, when I came to die, discover that I had not lived.”</p><small><cite>Henry David Thoreau</cite></small>
+							<p>“Youth- The Frontrunners of Peace & Development”</p>
 						</blockquote>
 					</div><!-- #element_164146649256cb6d97e3026 (end) -->
 				</section><!-- #section_56c90bad5a2b2 (end) -->
@@ -1636,20 +1043,8 @@ WordPress: 4.5.7
 										<p> The intricacies of international law have seen some truly
                                             spectacular blowouts between countries. Yet, the resolve of
                                             our next committee has stood strong through every one of
-                                            these. Tasked with creating legislature, something we've
-                                            seen many people, both local and foreign, fantastically fail
-                                            at, this committee has time and again proven why laws are
-                                            the only thing preventing man from retrogressing back into
-                                            a primitive form of civilisation. And now, delegates, the time
-                                            has arrived for you to rewrite the laws of a world order that
-                                            is in desperate need of a shakeup. Introducing, the
-                                            boardroom of law, and the bedrock upon which we built
-                                            civilisation as we know it, the sixth committee of the UNGA,
-                                            Legal. </p>
-                                        <br />
-                                        <br />
-                                        <br />
-                                        <br />
+                                            these... </p>
+										<a class="btn tb-custom-button btn-sm" data-bg="transparent" data-bg-hover="#ffffff" data-text="#ffffff" data-text-hover="#161616" href="#." style="background-color: transparent; border-color: #ffffff; color: #ffffff;" title="Read More">Read More</a>
 									</div>
 								</div><!-- #block_27611356056cb820f1d2a9 (end) -->
 								<div class="element element-2 element-content element-block no-popout clearfix" id="block_26971232456cb8233a6701" style="background-color: transparent;">
@@ -1658,19 +1053,8 @@ WordPress: 4.5.7
 										<p>Money. Social dominance. In three words, two
                                            things that could very well make anyone the alpha
                                             dog in any social circumstance. And what better
-                                            manifestation of it is than our next committee?
-                                            Welcome to an old stalwart of every MUN, a classic
-                                            with good reason, for every word you say here
-                                            carries the weight of today's most important
-                                            luxury: money. In this House, facts do not make
-                                            room for speculation. The lives of too many hang
-                                            in the balance, all on the thread of a committee
-                                            determining economic policy. Welcome to a world
-                                            of money, underhanded deals, and ripped-apart
-                                            fiscal policy. Welcome to the Economic and Social
-                                            Council.</p>
-                                        <br />
-                                        <br />
+                                            manifestation...</p>
+										<a class="btn tb-custom-button btn-sm" data-bg="transparent" data-bg-hover="#ffffff" data-text="#ffffff" data-text-hover="#161616" href="#." style="background-color: transparent; border-color: #ffffff; color: #ffffff;" title="Read More">Read More</a>
 									</div>
 								</div><!-- #block_26971232456cb8233a6701 (end) -->
 								<div class="element element-3 element-content element-block last no-popout clearfix" id="block_138644606356cb823328104" style="background-color: transparent;">
@@ -1679,14 +1063,8 @@ WordPress: 4.5.7
 										<p>Power struggles, outraged vetoes, political duplicity and the
                                             struggle for equality plague the nerve centre of the biggest
                                             peacekeeper in the world today. Yet, this committee has
-                                            stayed a bastion of all the good it represents every time a
-                                            precarious situation was dangerously close to imploding.
-                                            Meet the players of the game we're all pawns in. Want to
-                                            take over the world? This is the easiest way to do
-                                            it.Delegates, introducing, the third committee of DiPSMUN
-                                            2017, the Energizer bunny of the UN, the nerve centre, the
-                                            power playing political behemoth, the United Nations
-                                            Security Council.</p>
+                                            stayed...</p>
+										<a class="btn tb-custom-button btn-sm" data-bg="transparent" data-bg-hover="#ffffff" data-text="#ffffff" data-text-hover="#161616" href="#." style="background-color: transparent; border-color: #ffffff; color: #ffffff;" title="Read More">Read More</a>
 									</div>
 								</div><!-- #block_138644606356cb823328104 (end) -->
 
@@ -1696,13 +1074,8 @@ WordPress: 4.5.7
                                         <p>Confidence. Wit. Oration. These 3 words sum up the pride every
                                             good journalist takes in showing the rest of the world, the true
                                             horrors of society. Our next committee, is a totality of these skills
-                                            and in it, the power to control the masses with propaganda or to
-                                            bring our the devastating raw truth rests in your hands. It is often
-                                            said, “Those who control the media, control people’s minds.” We
-                                            present to you, the International Press Corps, at DiPSMUN 2017, for
-                                            the most wittiest of the delegates ready to compete and come up at
-                                            the top. Delegates, buckle up for a rough ride, welcome to
-                                            International Press Corps.</p>
+                                            and...</p>
+										<a class="btn tb-custom-button btn-sm" data-bg="transparent" data-bg-hover="#ffffff" data-text="#ffffff" data-text-hover="#161616" href="#." style="background-color: transparent; border-color: #ffffff; color: #ffffff;" title="Read More">Read More</a>
                                     </div>
                                 </div><!-- #block_138644606356cb823328104 (end) -->
 
@@ -1714,18 +1087,8 @@ WordPress: 4.5.7
 										<p>If you're looking to solve the pressing issues that question the
                                             fundamental freedom and human rights of today's world, you're
                                             in the right place. Delegates, presenting to you the third
-                                            committee of the United Nations General Assembly- the Social,
-                                            Humanitarian and Cultural Affairs Committee (SOCHUM). Since
-                                            this is one of the largest committees of the UN, this forum is
-                                            where maximum discussion, paramount deliberation and
-                                            effective negotiation take place. In an unpredictable world,
-                                            where anyone and everyone could be in danger, those who
-                                            protect them are in danger too. This committee will leave you
-                                            looking for exemplary and unquestionable solutions and will
-                                            leave an impact on you, as delegates, as you're exposed to the
-                                            harsh world. Welcome to SOCHUM.</p>
-                                        <br />
-                                        <br />
+                                            committee...</p>
+										<a class="btn tb-custom-button btn-sm" data-bg="transparent" data-bg-hover="#ffffff" data-text="#ffffff" data-text-hover="#161616" href="#." style="background-color: transparent; border-color: #ffffff; color: #ffffff;" title="Read More">Read More</a>
 									</div>
 								</div><!-- #block_98335951856cb8233e85e0 (end) -->
 
@@ -1735,17 +1098,8 @@ WordPress: 4.5.7
                                         <p>The year is 1760. Colonialism's tendrils are extending into the
                                             world and cementing their hold as their strength begins
                                             increasing. The indigenous kingdoms and territories in South
-                                            and Southeast Asia are beginning to feel the vice of the
-                                            Europeans. Yet, a full-blown war between divided forces will
-                                            achieve nothing. Military strength and trade relations still rule
-                                            a newly established worldwide network that the Companies
-                                            are using to make their governments rich. The native kings,
-                                            aware of their failing powers, now look to diplomacy to
-                                            deliver to them what military strength cannot. Delegates,
-                                            transport yourselves 277 years back, to a place where the
-                                            strength of your arms dictated the reach of your arm.
-                                            Welcome to the Historic South Asian Trading and Security
-                                            Conference, 1760.</p>
+                                            and...</p>
+										<a class="btn tb-custom-button btn-sm" data-bg="transparent" data-bg-hover="#ffffff" data-text="#ffffff" data-text-hover="#161616" href="#." style="background-color: transparent; border-color: #ffffff; color: #ffffff;" title="Read More">Read More</a>
                                     </div>
                                 </div><!-- #block_33399375556cb8235e6bdb (end) --> 
 
@@ -1755,15 +1109,8 @@ WordPress: 4.5.7
 										<p>Drama. Politics. Corruption. Double-crossing. If you're
                                             looking for those things, you're in the right place. Our next
                                             committee is only for the most wily of delegates. Welcome
-                                            to the Indian political scenario, a place fraught with familial
-                                            and personal interests, ripped apart by scams and rebuilt
-                                            haphazardly by the same people who blew it apart.
-                                            Double-crossing is the new norm. Delegates, prepare for a
-                                            slippery ride as you take on the snakes of our national
-                                            stage. Scruples mean nothing, and your loyalty is only as
-                                            strong as your bank account. Welcome to no-holds-barred
-                                            debate featuring the heroes and villains of today's bizarre
-                                            politics. Welcome to the All India Parties Meet.</p>
+                                            to...</p>
+										<a class="btn tb-custom-button btn-sm" data-bg="transparent" data-bg-hover="#ffffff" data-text="#ffffff" data-text-hover="#161616" href="#." style="background-color: transparent; border-color: #ffffff; color: #ffffff;" title="Read More">Read More</a>
 									</div>
 								</div><!-- #block_33399375556cb8235e6bdb (end) -->
 
@@ -1774,19 +1121,8 @@ WordPress: 4.5.7
                                         <p>Dayan spoke next, emphasizing the need to move at once, before
                                             the combined Arab forces grew stronger yet, while there was still
                                             a semblance of surprise. “Nasser must fulfill the process he
-                                            started,” he stated, “We must do what he wants us to do.”
-                                            Presenting, the Joint Crisis Cabinet. Two Cabinets, discussing the
-                                            same agenda, where the decisions of one affect the working of
-                                            the other. A continuous crisis based simulation which will test the
-                                            ability of its participants to think on their feet. Represent
-                                            characters from history and take upon the power to alter the
-                                            course of history in this historic stimulation. Its Agenda- The Arab
-                                            Israeli Conflict of 1967. Rarely in modern times has so short and
-                                            localized a conflict had such prolonged, global consequences.
-                                            Seldom has the world’s attention been gripped, and remained
-                                            seized, by a single event and its ramifications. In a very real sense,
-                                            for statesmen and diplomats and soldiers, the war has never
-                                            ended</p>
+                                            started...</p>
+										<a class="btn tb-custom-button btn-sm" data-bg="transparent" data-bg-hover="#ffffff" data-text="#ffffff" data-text-hover="#161616" href="#." style="background-color: transparent; border-color: #ffffff; color: #ffffff;" title="Read More">Read More</a>
                                     </div>
                                 </div>
                             
@@ -1814,8 +1150,8 @@ WordPress: 4.5.7
 					<div class="element element-1 element-content first founder-image--name--title no-popout clearfix" id="element_34031563456cce839ef349" style="background-color: transparent;">
 						<div class="tb-content-block entry-content text-center" style="">
 							<p><img class="img-circle" src="assets/img/bio-img.png" width="140"></p>
-							<h5>Johnny Rocket</h5>
-							<p>Founder &#038; CEO</p>
+							<h5>ABC XYZ</h5>
+							<p>Security General</p>
 						</div>
 					</div><!-- #element_34031563456cce839ef349 (end) -->
 					<div class="element element-2 element-columns last bio no-popout stack-md clearfix" id="element_164785697356cce829a4b0e" style="background-color: transparent;">
@@ -1846,60 +1182,49 @@ WordPress: 4.5.7
 					<div class="bg-shade" style="background-color: rgba(10,10,10,0.9);"></div>
 					<div class="element element-1 element-content first title no-popout clearfix" id="element_32795109656cd10bda5226" style="background-color: transparent;">
 						<div class="tb-content-block entry-content" style="">
-							<h6>About Us</h6>
-							<h2>We&#8217;re a bold bunch of riders, explorers &#038; hard-core thrill seekers that bring it.</h2>
+							<h6>Schedule</h6>
+							<h2>Can&#8217;t wait for it? We aren&#8217;t far away!</h2>
 						</div>
 					</div><!-- #element_32795109656cd10bda5226 (end) -->
 					<div class="element element-2 element-columns last content no-popout stack-md clearfix" id="element_100240126556cd10ebf1b49" style="background-color: transparent;">
 						<div class="row stack-md row-inner" style="margin: 0 -15px 0 -15px;">
-							<div class="col col-md-3 standard" style="background-color: transparent;">
-								<div class="element element-1 element-divider element-block first last no-popout clearfix" id="block_54613302056cd11229ae21" style="background-color: transparent;">
-									<div class="tb-divider solid align-left" style="max-width: 75px;">
-										<span class="divider" style="background-color: #36b3a8;background-color: rgba(54,179,168,1);"></span>
-									</div><!-- .tb-divider (end) -->
-								</div><!-- #block_54613302056cd11229ae21 (end) -->
-							</div><!-- .col-md-3 (end) -->
-							<div class="col col-md-5 standard" style="background-color: transparent;">
+							<div class="col col-md-4 standard" style="background-color: transparent;">
 								<div class="element element-1 element-content element-block first last no-popout clearfix" id="block_43752797856cd10f76873f" style="background-color: transparent;">
 									<div class="tb-content-block entry-content" style="">
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis volutpat dui, in aliquet velit hendrerit sed. Integer posuere est dui ut.</p>
-										<p>Vivamus ipsum felis, tincidunt vitae metus non, bibendum dignissim nisi. Curabitur eu ante lobortis, tristique augue eget, efficitur metus. Donec condimentum justo a semper consequat.</p>
-										<p>Nunc tellus leo, efficitur vestibulum mauris cursus, volutpat pretium risus. Sed tempor libero a tellus posuere ultrices. Nulla nec imperdiet nisi, a dapibus orci. Pellentesque elementum, sem ac pulvinar efficitur, turpis nisl imperdiet risus.</p>
-										<p>Morbi velit risus, lacinia vel diam eu, maximus viverra dui. Quisque justo risus, vehicula at pulvinar at, lobortis et metus.</p>
+										<div class="element element-1 element-milestone element-block first last no-popout clearfix" style="background-color: transparent;"><div class="tb-milestone"><span class="milestone visible" style="color: #ffffff;"><span class="num">2nd June</span></span><h5 class="text">Registrations Open</h5></div><!-- .tb-milestone (end) --></div>
+										<div class="element element-1 element-milestone element-block first last no-popout clearfix" style="background-color: transparent;"><div class="tb-milestone"><span class="milestone visible" style="color: #ffffff;"><span class="num">16th June</span></span><h5 class="text">Last Day for Registration</h5></div><!-- .tb-milestone (end) --></div>
 									</div>
 								</div><!-- #block_43752797856cd10f76873f (end) -->
-							</div><!-- .col-md-5 (end) -->
+							</div><!-- .col-md-4 (end) -->
 							<div class="col col-md-4 standard" style="background-color: transparent;">
 								<div class="element element-1 element-content element-block first last no-popout clearfix" id="block_149958951656cd110491c65" style="background-color: transparent;">
 									<div class="tb-content-block entry-content" style="">
-										<p>Curabitur eu ante lobortis, tristique augue eget, efficitur metus. Donec condimentum justo a semper consequat. Nunc tellus leo, efficitur vestibulum mauris cursus, volutpat pretium risus. Sed tempor libero a tellus posuere ultrices.</p>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis volutpat dui, in aliquet velit hendrerit sed. Integer posuere est dui, ut egestas orci hendrerit at.</p>
-										<p>Vivamus ipsum felis, tincidunt vitae metus non, bibendum dignissim nisi. Nulla nec imperdiet nisi, a dapibus orci. Pellentesqu.</p>
+										<div class="element element-1 element-milestone element-block first last no-popout clearfix" style="background-color: transparent;"><div class="tb-milestone"><span class="milestone visible" style="color: #ffffff;"><span class="num">20th June</span></span><h5 class="text">Last Date for Payment of Delegate Fees</h5></div><!-- .tb-milestone (end) --></div>
+										<div class="element element-1 element-milestone element-block first last no-popout clearfix" style="background-color: transparent;"><div class="tb-milestone"><span class="milestone visible" style="color: #ffffff;"><span class="num">24th June</span></span><h5 class="text">Country Allocations</h5></div><!-- .tb-milestone (end) --></div>
+									</div>
+								</div><!-- #block_149958951656cd110491c65 (end) -->
+							</div><!-- .col-md-4 (end) -->
+							<div class="col col-md-4 standard" style="background-color: transparent;">
+								<div class="element element-1 element-content element-block first last no-popout clearfix" id="block_149958951656cd110491c65" style="background-color: transparent;">
+									<div class="tb-content-block entry-content" style="">
+										<div class="element element-1 element-milestone element-block first last no-popout clearfix" style="background-color: transparent;"><div class="tb-milestone"><span class="milestone visible" style="color: #ffffff;"><span class="num">27th June</span></span><h5 class="text">DiPSMUN Orientation</h5></div><!-- .tb-milestone (end) --></div>
+										<div class="element element-1 element-milestone element-block first last no-popout clearfix" style="background-color: transparent;"><div class="tb-milestone"><span class="milestone visible" style="color: #ffffff;"><span class="num">3rd July</span></span><h5 class="text">Last Day for Submission of Position Papers</h5></div><!-- .tb-milestone (end) --></div>
 									</div>
 								</div><!-- #block_149958951656cd110491c65 (end) -->
 							</div><!-- .col-md-4 (end) -->
 						</div><!-- .row (end) -->
+						<div class="row stack-md row-inner" style="margin: 50px -15px 0 -15px;">
+							<div class="col col-md-6 col-md-offset-3 standard" style="background-color: transparent;">
+								<div class="element element-1 element-content element-block first last no-popout clearfix" id="block_43752797856cd10f76873f" style="background-color: transparent;">
+									<div class="tb-content-block entry-content" style="">
+										<div class="element element-1 element-milestone element-block first last no-popout clearfix" style="background-color: transparent;"><div class="tb-milestone"><span class="milestone visible" style="color: #ffffff;"><span class="num">5th, 6th and 7th July</span></span><h5 class="text">DiPSMUN Dates</h5></div><!-- .tb-milestone (end) --></div>
+									</div>
+								</div><!-- #block_43752797856cd10f76873f (end) -->
+							</div><!-- .col-md-4 (end) -->
+						</div><!-- .row (end) -->
 					</div><!-- #element_100240126556cd10ebf1b49 (end) -->
 				</section><!-- #section_56c90bb3c708e (end) -->
-				<section class="section_56c90bb59c678 element-section element-count-1 featured-adventure standard" id="home-portland-section-8">
-					<div class="element element-1 element-gnar_featured_post first last featured-adventure popout clearfix" id="element_186011891656ce0aa16d8f5" style="background-color: transparent;">
-						<div class="tb-featured-post tb-parallax has-label">
-							<div class="parallax-figure" style="background-color:#000000">
-							<div class="tb-loader">
-								<span class="icon-1"></span><span class="icon-2"></span><span class="icon-3"></span>
-							</div><img alt="" src="wp-content/uploads/2016/03/featured-portland.jpg"></div><!-- .parallax-figure (end) -->
-							<div class="featured-content">
-								<div class="wrap" style="background-color: rgba(54,179,168,.90)">
-									<h5 class="featured-label" style="background-color: #36b3a8">Featured Adventure</h5>
-									<div class="entry-content">
-										<h2 class="entry-title">An Amazing Journey Through the Forest</h2>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in mi ante. Curabitur feugiat interdum justo, vitae ultrices lorem luctus.</p><a class="btn tb-custom-button read-more has-icon" data-bg="transparent" data-bg-hover="#ffffff" data-text="#ffffff" data-text-hover="#161616" href="http://demoblvd.com/themes/gnar/demo-1/2015/08/02/an-amazing-journey-through-the-mountains/" style="background-color: transparent; border-color: #ffffff; color: #ffffff;" target="_self" title="An Amazing Journey Through the Forest"><i class="fa fa-long-arrow-right"></i></a>
-									</div><!-- .entry-content (end) -->
-								</div><!-- .wrap (end) -->
-							</div><!-- .featured-content (end) -->
-						</div><!-- .tb-featured-post (end) -->
-					</div><!-- #element_186011891656ce0aa16d8f5 (end) -->
-				</section><!-- #section_56c90bb59c678 (end) -->
+				
 				<section class="section_56c90bb721c1b element-section element-count-2 css-class-home-testimonials has-bg image has-bg-shade no-repeat home-testimonials" id="home-portland-section-9">
 					<div class="bg-shade" style="background-color: rgba(255,255,255,0.85);"></div>
 					<div class="element element-1 element-headline first lead-text no-popout clearfix" id="element_62720570856ce03c2d0871" style="background-color: transparent;">
@@ -2086,15 +1411,15 @@ WordPress: 4.5.7
 									</li>
 								</ul><!-- .themeblvd-contact-bar (end) -->
 								<div class="copyright">
-									<p>&copy; 2017 Gnar Designed by <a href="http://themeblvd.com/" target="_blank" title="Theme Blvd">Theme Blvd</a></p>
+									<p>&copy; 2017 DiPSMUN by <a href="http://manikiran.cf/" target="_blank" title="Manikiran">Manikiran</a> and <a href="http://facebook.com/pratap.vangol">Pratap</a></p>
 								</div>
 								<div class="footer-nav">
 									<ul class="list-inline" id="menu-sub-menu">
 										<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5225 level-1" id="menu-item-5225">
-											<a href="http://demoblvd.com/themes/gnar/demo-1/privacy/">Privacy Policy</a>
+											<a href="privacy.html">Privacy Policy</a>
 										</li>
 										<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5226 level-1" id="menu-item-5226">
-											<a href="http://demoblvd.com/themes/gnar/demo-1/terms/">Terms of Service</a>
+											<a href="terms.html">Terms of Service</a>
 										</li>
 									</ul>
 								</div>
@@ -2113,7 +1438,7 @@ WordPress: 4.5.7
 		<div class="wrap">
 			<a class="close-search" href="#" title="Close">x</a>
 			<div class="tb-search">
-				<form action="http://demoblvd.com/themes/gnar/demo-1/" method="get">
+				<form action="search.php" method="get">
 					<div class="search-wrap">
 						<input class="search-input" name="s" placeholder="Search the site..." type="search"> <button class="search-submit btn-primary" type="submit"><i class="fa fa-search"></i></button>
 					</div><input name='lang' type='hidden' value='en'>
@@ -2121,36 +1446,6 @@ WordPress: 4.5.7
 			</div><!-- .tb-search (end) -->
 		</div><!-- .wrap (end) -->
 	</div><!-- .tb-floating-search light (end) --><a class="tb-scroll-to-top" href="#">Top</a>
-	<div class="gnar-lang-popup modal fade" id="floating-lang-switcher">
-		<div class="modal-dialog modal-sm">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title">Set Language</h4>
-				</div>
-				<div class="modal-body clearfix">
-					<ul class="gnar-lang-selector list-unstyled">
-						<li class="lang-en active"><span title="English">English</span></li>
-					</ul>
-				</div><!-- .modal-body (end) -->
-			</div><!-- .modal-content (end) -->
-		</div><!-- .modal-dialog (end) -->
-	</div><!-- .tb-wpml-switcher (end) -->
-	<div class="tb-cart-popup modal fade" id="floating-shopping-cart">
-		<div class="modal-dialog modal-sm">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title">Shopping Cart</h4>
-				</div>
-				<div class="modal-body clearfix">
-					<div class="widget woocommerce widget_shopping_cart">
-						<div class="widget_shopping_cart_content"></div>
-					</div>
-				</div><!-- .modal-body (end) -->
-			</div><!-- .modal-content (end) -->
-		</div><!-- .modal-dialog (end) -->
-	</div><!-- .tb-cart-popup (end) -->
 	<script src='wp-content/plugins/bbpress/templates/default/js/editor237e.js?ver=2.5.9-6017' type='text/javascript'>
 	</script> 
 	<script src='wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.minc141.js?ver=2.6.1' type='text/javascript'>
