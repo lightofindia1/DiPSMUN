@@ -1,9 +1,14 @@
 <?php
 error_reporting(0);
-$db_host = "localhost";
+/*$db_host = "localhost";
 $db_username = "root";
 $db_password = "";
-$db_name = "dipsmun_new";
+$db_name = "dipsmun_new";*/
+$db_host = "mysql.hostinger.in";
+$db_username = "u495816049_root";
+$db_password = "sin2x=2sinxcosx";
+$db_name = "u495816049_admin";
+
 $conn = new mysqli($db_host, $db_username, $db_password, $db_name);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
