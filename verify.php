@@ -46,7 +46,7 @@ if(isset($_POST["school_registration"]))
 
 		$mail->Subject = 'New School Registration';
 		$mail->Body    = "The following are the registration details<br><br>Institution Name: <b>".$institution_name."</b><br>Teacher Coordinator Name: <b>".$teacher_name."</b><br>Teacher Coordinator Phone: <b>".$teacher_phone."</b><br>Teacher Coordinator Email: <b>".$teacher_email."</b><br>Student Coordinator Name: <b>".$student_name."</b><br>Student Coordinator Phone: <b>".$student_phone."</b><br>Student Coordinator Email: <b>".$student_email."</b><br>No of Students: <b>".$no_of_students."</b><br>Country Preferences: <b>".nl2br($country_preferences)."</b><br>Past Experiences: <b>".nl2br($past_exp)."</b><br>Extra Note: <b>".nl2br($extra)."</b><br><br><br>Regards,<br>DiPSMUN Admin";
-		$mail->AltBody = "The following are the registration details\n\nInstitution Name: ".$institution_name."\nTeacher Coordinator Name: ".$teacher_name"\nTeacher Coordinator Phone: ".$teacher_phone."\nTeacher Coordinator Email: ".$teacher_email."\nStudent Coordinator Name: ".$student_name."\nStudent Coordinator Phone: ".$student_phone."\nStudent Coordinator Email: ".$student_email."\nNo of Students: ".$no_of_students."\nCountry Preferences: ".($country_preferences)."\nPast Experiences: ".($past_exp)."\nExtra Note: ".($extra)."\n\nRegards,\nDiPSMUN Admin";
+		$mail->AltBody = "The following are the registration details\n\nInstitution Name: ".$institution_name."\nTeacher Coordinator Name: ".$teacher_name."\nTeacher Coordinator Phone: ".$teacher_phone."\nTeacher Coordinator Email: ".$teacher_email."\nStudent Coordinator Name: ".$student_name."\nStudent Coordinator Phone: ".$student_phone."\nStudent Coordinator Email: ".$student_email."\nNo of Students: ".$no_of_students."\nCountry Preferences: ".($country_preferences)."\nPast Experiences: ".($past_exp)."\nExtra Note: ".($extra)."\n\nRegards,\nDiPSMUN Admin";
 
 		$mail->send();
 		$response['msg']='Saved to database and emailed';
@@ -88,8 +88,8 @@ else if(isset($_POST["individual_registration"])){
 		$mail->isHTML(true); 
 
 		$mail->Subject = 'New Individual Registration';
-		$mail->Body    = "The following are the registration details<br><br>Name: <b>".$name."</b><br>Institution Name: <b>".$institution_name."</b><br>Email: <b>".$teacher_name."</b><br>Teacher Coordinator Phone: <b>".$teacher_phone."</b><br>Teacher Coordinator Email: <b>".$teacher_email."</b><br>Student Coordinator Name: <b>".$student_name."</b><br>Student Coordinator Phone: <b>".$student_phone."</b><br>Student Coordinator Email: <b>".$student_email."</b><br>No of Students: <b>".$no_of_students."</b><br>Country Preferences: <b>".nl2br($country_preferences)."</b><br>Past Experiences: <b>".nl2br($past_exp)."</b><br>Extra Note: <b>".nl2br($extra)."</b><br><br><br>Regards,<br>DiPSMUN Admin";
-		$mail->AltBody = "The following are the registration details\n\nInstitution Name: ".$institution_name."\nTeacher Coordinator Name: ".$teacher_name"\nTeacher Coordinator Phone: ".$teacher_phone."\nTeacher Coordinator Email: ".$teacher_email."\nStudent Coordinator Name: ".$student_name."\nStudent Coordinator Phone: ".$student_phone."\nStudent Coordinator Email: ".$student_email."\nNo of Students: ".$no_of_students."\nCountry Preferences: ".($country_preferences)."\nPast Experiences: ".($past_exp)."\nExtra Note: ".($extra)."\n\nRegards,\nDiPSMUN Admin";
+		$mail->Body    = "The following are the registration details<br><br>Name: <b>".$name."</b><br>Institution Name: <b>".$institution_name."</b><br>Email: <b>".$email."</b><br>Phone: <b>".$phone."</b><br>Committee Preferences: <b>".nl2br($committee_preferences)."</b><br>Country Preferences: <b>".nl2br($country_preferences)."</b><br>Past Experiences: <b>".nl2br($past_exp)."</b><br>Extra Note: <b>".nl2br($extra)."</b><br><br><br>Regards,<br>DiPSMUN Admin";
+		$mail->AltBody = "The following are the registration details\n\nName: ".$name."\nInstitution Name: ".$institution_name."\nEmail: ".$email."\nPhone: ".$phone."\nCommittee Preferences: ".($committee_preferences)."\nCountry Preferences: ".($country_preferences)."\nPast Experiences: ".($past_exp)."\nExtra Note: ".($extra)."\n\n\nRegards,\nDiPSMUN Admin";
 
 		$mail->send();
 		$response['msg']='Saved to database and emailed';
@@ -100,4 +100,5 @@ else if(isset($_POST["individual_registration"])){
 		$response['code']='INDIVIDUAL_REGISTRATION_ERR_1';
 	}
 }
-echo json_encode($respons
+echo json_encode($response);
+?>
