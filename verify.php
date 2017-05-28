@@ -46,7 +46,7 @@ if(isset($_POST["school_registration"]))
 		$mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 		$mail->Port = 465;
 		$mail->setFrom('admin@dipsmun2017.com', 'DiPSMUN Admin');
-		$mail->addAddress('pmanikiran_1998@yahoo.co.in', 'Manikiran');  
+		$mail->addAddress('dipsmun2017@gmail.com', 'DiPSMUN 2017');  
 		$mail->isHTML(true); 
 
 		$mail->Subject = 'New School Registration';
@@ -89,7 +89,7 @@ else if(isset($_POST["individual_registration"])){
 		$mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 		$mail->Port = 465;
 		$mail->setFrom('admin@dipsmun2017.com', 'DiPSMUN Admin');
-		$mail->addAddress('pmanikiran_1998@yahoo.co.in', 'Manikiran');  
+		$mail->addAddress('dipsmun2017@gmail.com', 'DiPSMUN 2017');  
 		$mail->isHTML(true); 
 
 		$mail->Subject = 'New Individual Registration';
@@ -103,6 +103,45 @@ else if(isset($_POST["individual_registration"])){
 	else{
 		$response['msg']='Unable to save to database';
 		$response['code']='INDIVIDUAL_REGISTRATION_ERR_1';
+	}
+}
+else if(isset($_POST["contact_us"])){
+	$name=$_POST["name"];
+	$phone=$_POST["phone"];
+	$email=$_POST["email"];
+	$msg=$_POST["msg"];
+	$ip=$_SERVER['REMOTE_ADDR'];
+	$time=time();
+	$sql="INSERT INTO contact_us (`name`,`email`,`phone`,`msg`,`ip`,`time`) VALUES ('$name','$email','$phone','$msg','$ip','$time')";
+	if(mysqli_query($conn,$sql)){
+		require 'PHPMailer/PHPMailerAutoload.php';
+
+		$mail = new PHPMailer;
+
+		$mail->SMTPDebug = 0;                               // Enable verbose debug output
+
+		$mail->isSMTP();                                      // Set mailer to use SMTP
+		$mail->Host = 'smtp.zoho.com';  // Specify main and backup SMTP servers
+		$mail->SMTPAuth = true;                               // Enable SMTP authentication
+		$mail->Username = 'admin@dipsmun2017.com';                 // SMTP username
+		$mail->Password = 'Sin2x=2sinxcosx';                           // SMTP password
+		$mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
+		$mail->Port = 465;
+		$mail->setFrom('admin@dipsmun2017.com', 'DiPSMUN Admin');
+		$mail->addAddress('dipsmun2017@gmail.com', 'DiPSMUN 2017');  
+		$mail->isHTML(true); 
+
+		$mail->Subject = 'New Query From '.$name;
+		$mail->Body    = "A new query has been recieved.<br><br>Name: <b>".$name."</b><br>Email: <b>".$email."</b><br>Phone: <b>".$phone."</b><br>Message: <b>".nl2br($msg)."</b><br><br>Regards,<br>DiPSMUN Admin";
+		$mail->AltBody = "A new query has been recieved.\n\nName: ".$name."\nEmail: ".$email."\nPhone: ".$phone."\nMessage: ".$msg."\n\nRegards,\nDiPSMUN Admin";
+
+		$mail->send();
+		$response['msg']='Saved to database and emailed';
+		$response['code']='CONTACT_US_SUC';
+	}
+	else{
+		$response['msg']='Unable to save to database';
+		$response['code']='CONTACT_US_ERR_1';
 	}
 }
 echo json_encode($response);

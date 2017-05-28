@@ -835,6 +835,16 @@ WordPress: 4.7.4
 			</div><!-- .modal-content (end) -->
 		</div><!-- .modal-dialog (end) -->
 	</div><!-- .tb-cart-popup (end) -->
+	<div id="mypreloader">
+		<div align="center" class="cssload-fond">
+			<div class="cssload-container-general">
+					<div class="cssload-internal"><div class="cssload-ballcolor cssload-ball_1"> </div></div>
+					<div class="cssload-internal"><div class="cssload-ballcolor cssload-ball_2"> </div></div>
+					<div class="cssload-internal"><div class="cssload-ballcolor cssload-ball_3"> </div></div>
+					<div class="cssload-internal"><div class="cssload-ballcolor cssload-ball_4"> </div></div>
+			</div>
+		</div>
+	</div>
 	<script src='wp-content/plugins/bbpress/templates/default/js/editor6640.js?ver=2.5.12-6148' type='text/javascript'>
 	</script> 
 	<script type='text/javascript'>
@@ -910,6 +920,7 @@ WordPress: 4.7.4
 			$('#ri_name').focus();
 		});
 		$("#school_reg").submit(function(){
+			$("#mypreloader").fadeIn();
 			$('.my_has_err').each(function(){
 				$(this).removeClass("my_has_err");
 			});
@@ -925,34 +936,42 @@ WordPress: 4.7.4
 			var rs_past_exp=$('#rs_past_exp').val();
 			var rs_extra=$('#rs_extra').val();
 			if(rs_institution_name.length<3){
+				$("#mypreloader").fadeOut();
 				$('#rs_instituion_name').addClass("my_has_err").focus();
 				myalerty('Enter valid Institution Name!','error');
 			}
 			else if(rs_teacher_name.length<3){
+				$("#mypreloader").fadeOut();
 				$('#rs_teacher_name').addClass("my_has_err").focus();
 				myalerty('Enter valid Teacher Name!','error');
 			}
 			else if(rs_teacher_phone.length<6){
+				$("#mypreloader").fadeOut();
 				$('#rs_teacher_phone').addClass("my_has_err").focus();
 				myalerty('Enter valid Teacher Phone Number!','error');
 			}
 			else if(!isEmail(rs_teacher_email)){
+				$("#mypreloader").fadeOut();
 				$('#rs_teacher_email').addClass("my_has_err").focus();
 				myalerty('Enter valid Teacher Email!','error');
 			}
 			else if(rs_student_name.length<3){
+				$("#mypreloader").fadeOut();
 				$('#rs_student_name').addClass("my_has_err").focus();
 				myalerty('Enter valid Student Name!','error');
 			}
 			else if(rs_student_phone.length<6){
+				$("#mypreloader").fadeOut();
 				$('#rs_student_phone').addClass("my_has_err").focus();
 				myalerty('Enter valid Student Phone Number!','error');
 			}
 			else if(!isEmail(rs_student_email)){
+				$("#mypreloader").fadeOut();
 				$('#rs_student_email').addClass("my_has_err").focus();
 				myalerty('Enter valid Student Email!','error');
 			}
 			else if(rs_country_preferences.length<3){
+				$("#mypreloader").fadeOut();
 				$('#rs_country_preferences').addClass("my_has_err").focus();
 				myalerty('Enter valid Country Preferences!','error');
 			}
@@ -962,17 +981,26 @@ WordPress: 4.7.4
 					method:'POST',
 					data:{'school_registration':true,'rs_institution_name':rs_institution_name,'rs_teacher_name':rs_teacher_name,'rs_teacher_phone':rs_teacher_phone,'rs_teacher_email':rs_teacher_email,'rs_student_name':rs_student_name,'rs_student_phone':rs_student_phone,'rs_student_email':rs_student_email,'rs_no_of_students':rs_no_of_students,'rs_country_preferences':rs_country_preferences,'rs_past_exp':rs_past_exp,'rs_extra':rs_extra},
 					success:function(response){
-						var resp=JSON.parse(response);
-						if(resp.code=='SCHOOL_REGISTRATION_SUC'){
-							$('#reg_school').slideUp();
-							$('#reg_success').slideDown();
+						try{
+							var resp=JSON.parse(response);
+							if(resp.code=='SCHOOL_REGISTRATION_SUC'){
+								$("#mypreloader").fadeOut();
+								$('#reg_school').slideUp();
+								$('#reg_success').slideDown();
+							}
+							else
+							{
+								$("#mypreloader").fadeOut();
+								myalerty('Something went wrong! Please try again later!','error');
+							}
 						}
-						else
-						{
+						catch(err){
+							$("#mypreloader").fadeOut();
+							console.log(err);
 							myalerty('Something went wrong! Please try again later!','error');
-						}
 					},
 					error:function(response){
+						$("#mypreloader").fadeOut();
 						myalerty('Please check your internet connection!','error');
 					}
 				});
@@ -1000,6 +1028,7 @@ WordPress: 4.7.4
 			}).show();
 		}
 		$("#reg_individual").submit(function(){
+			$("#mypreloader").fadeIn();
 			$('.my_has_err').each(function(){
 				$(this).removeClass("my_has_err");
 			});
@@ -1012,26 +1041,32 @@ WordPress: 4.7.4
 			var ri_past_exp=$("#ri_past_exp").val();
 			var ri_extra=$("#ri_extra").val();
 			if(ri_name.length<3){
+				$("#mypreloader").fadeOut();
 				$('#ri_name').addClass("my_has_err").focus();
 				myalerty('Enter valid Name!','error');
 			}
 			else if(ri_institution_name.length<3){
+				$("#mypreloader").fadeOut();
 				$('#ri_institution_name').addClass("my_has_err").focus();
 				myalerty('Enter valid Institution Name!','error');
 			}
 			else if(!isEmail(ri_email)){
+				$("#mypreloader").fadeOut();
 				$('#ri_email').addClass("my_has_err").focus();
 				myalerty('Enter valid Email!','error');
 			}
 			else if(ri_phone.length<6){
+				$("#mypreloader").fadeOut();
 				$('#ri_phone').addClass("my_has_err").focus();
 				myalerty('Enter valid Phone Number!','error');
 			}
 			else if(ri_committee_preferences.length<3){
+				$("#mypreloader").fadeOut();
 				$('#ri_committee_preferences').addClass("my_has_err").focus();
 				myalerty('Enter valid Committee Preferences!','error');
 			}
 			else if(ri_country_preferences.length<3){
+				$("#mypreloader").fadeOut();
 				$('#ri_country_preferences').addClass("my_has_err").focus();
 				myalerty('Enter valid Country Preferences!','error');
 			}
@@ -1045,19 +1080,24 @@ WordPress: 4.7.4
 						try{
 							var resp=JSON.parse(response);
 							if(resp.code=='INDIVIDUAL_REGISTRATION_SUC'){
+								$("#mypreloader").fadeOut();
 								$('#reg_individual').slideUp();
 								$('#reg_success').slideDown();
 							}
 							else
 							{
+								$("#mypreloader").fadeOut();
 								myalerty('Something went wrong! Please try again later!','error');
 							}
 						}
 						catch(err){
+							$("#mypreloader").fadeOut();
 							console.log(err);
+							myalerty('Something went wrong! Please try again later!','error');
 						}
 					},
 					error:function(response){
+						$("#mypreloader").fadeOut();
 						myalerty('Please check your internet connection!','error');
 					}
 				});

@@ -386,6 +386,9 @@
 	.my_has_err{
 		border:2px solid red !important;
 	}
+	.jumbotron *{
+		color:#fff;
+	}
 	</style><!-- end SI CAPTCHA Anti-Spam - login/register form style -->
 	<link href='bower_components/noty/lib/noty.css' rel="stylesheet">
 </head>
@@ -492,7 +495,7 @@
 						<div class="sidebar_layout-inner">
 							<div class="row grid-protection">
 								<!-- CONTENT (start) -->
-								<div class="col-md-12 clearfix" id="content" role="main">
+								<div class="col-md-6 clearfix" id="content" role="main">
 									<div class="inner">
 										<article class="top has-title has-content post-5463 page type-page status-publish has-post-thumbnail hentry" id="post-5463">
 											<div class="entry-content clearfix ">
@@ -537,6 +540,32 @@
 										</article><!-- #post-5463 -->
 									</div><!-- .inner (end) -->
 								</div><!-- #content (end) -->
+								<div class="col-md-6 clearfix">
+									<div class="row">
+										<div class="col-md-6">
+											<div class="alert alert-danger">
+												<h3>Teacher Coordinator:</h3>
+												<i class="fa fa-phone"></i> +91 9876543210<br>
+												<i class="fa fa-letter"></i> someone@gmail.com
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="alert alert-warning">
+												<h3>Student Coordinator:</h3>
+												<i class="fa fa-phone"></i> +91 9876543210<br>
+												<i class="fa fa-letter"></i> someone@gmail.com
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-12">
+											<div class="alert alert-success">
+												<h3>Our Location:</h3>
+												<iframe align="middle" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.224426434409!2d77.56134451392046!3d12.89328562008253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae19656021b931%3A0x77779b0a32fb57ee!2sDelhi+Public+School+Bangalore+South!5e0!3m2!1sen!2sin!4v1495262605437" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+											</div>
+										</div>
+									</div>
+								</div>
 								<!-- CONTENT (end) -->
 								<!-- SIDEBARS (start) -->
 								<!-- SIDEBARS (end) -->
@@ -624,6 +653,16 @@
 			</div><!-- .modal-content (end) -->
 		</div><!-- .modal-dialog (end) -->
 	</div><!-- .tb-cart-popup (end) -->
+	<div id="mypreloader">
+		<div align="center" class="cssload-fond">
+			<div class="cssload-container-general">
+					<div class="cssload-internal"><div class="cssload-ballcolor cssload-ball_1"> </div></div>
+					<div class="cssload-internal"><div class="cssload-ballcolor cssload-ball_2"> </div></div>
+					<div class="cssload-internal"><div class="cssload-ballcolor cssload-ball_3"> </div></div>
+					<div class="cssload-internal"><div class="cssload-ballcolor cssload-ball_4"> </div></div>
+			</div>
+		</div>
+	</div>
 	<script src='wp-content/plugins/bbpress/templates/default/js/editor6640.js?ver=2.5.12-6148' type='text/javascript'>
 	</script> 
 	<script type='text/javascript'>
@@ -689,6 +728,7 @@
 	}
 	$(document).ready(function(){
 		$("#contact_form").submit(function(){
+			$("#mypreloader").fadeIn();
 			$('.my_has_err').each(function(){
 				$(this).removeClass("my_has_err");
 			});
@@ -698,18 +738,22 @@
 			var msg=$('#contact_msg').val();
 			
 			if(name.length<3){
+				$("#mypreloader").fadeOut();
 				$('#contact_name').addClass("my_has_err").focus();
 				myalerty('Enter valid Name!','warning');
 			}
 			else if(phone.length<6){
+				$("#mypreloader").fadeOut();
 				$('#contact_phone').addClass("my_has_err").focus();
 				myalerty('Enter valid Phone Number!','warning');
 			}
 			else if(!isEmail(email)){
+				$("#mypreloader").fadeOut();
 				$('#contact_email').addClass("my_has_err").focus();
 				myalerty('Enter valid Email!','warning');
 			}
 			else if(msg.length<3){
+				$("#mypreloader").fadeOut();
 				$('#contact_msg').addClass("my_has_err").focus();
 				myalerty('Enter valid Message!','warning');
 			}
@@ -719,18 +763,30 @@
 					method:'POST',
 					data:{'contact_us':true,'name':name,'phone':phone,'email':email,'msg':msg},
 					success:function(response){
-						var resp=JSON.parse(response);
-						if(resp.code=='CONTACT_US_SUC'){
-							$('#contact_us').slideUp();
-							$('#contact_success').slideDown();
+						console.log(response);
+						try{
+							var resp=JSON.parse(response);
+							if(resp.code=='CONTACT_US_SUC'){
+								$('#contact_us').slideUp();
+								$('#contact_success').slideDown();
+								$("#mypreloader").fadeOut();
+							}
+							else
+							{
+								$("#mypreloader").fadeOut();
+								myalerty('Something went wrong! Please try again later!','error');
+							}
 						}
-						else
-						{
-
+						catch(err){
+							$("#mypreloader").fadeOut();
+							myalerty('Something went wrong! Please try again later!','error');
+							console.log(err);
 						}
 					},
 					error:function(response){
-
+						$("#mypreloader").fadeOut();
+						console.log(response);
+						myalerty('Please check your internet connection!','error');
 					}
 				});
 			}
